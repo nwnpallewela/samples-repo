@@ -1,0 +1,73 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "ns:employees",
+  "type" : "object",
+  "properties" : {
+    "ns:employee" : {
+      "id" : "http://wso2jsonschema.org/ns:employee",
+      "type" : "array",
+      "items" : [ {
+        "id" : "http://wso2jsonschema.org/ns:employee/0",
+        "type" : "object",
+        "properties" : {
+          "ns:firstname" : {
+            "id" : "http://wso2jsonschema.org/ns:employee/0/ns:firstname",
+            "type" : "string"
+          },
+          "ns:lastname" : {
+            "id" : "http://wso2jsonschema.org/ns:employee/0/ns:lastname",
+            "type" : "string"
+          },
+          "sn:addresses" : {
+            "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses",
+            "type" : "object",
+            "properties" : {
+              "sn:address" : {
+                "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address",
+                "type" : "array",
+                "items" : [ {
+                  "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address/0",
+                  "type" : "object",
+                  "properties" : {
+                    "sn:city" : {
+                      "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address/0/sn:city",
+                      "type" : "object",
+                      "value" : {
+                        "type" : "string"
+                      },
+                      "properties" : { },
+                      "attributes" : {
+                        "postalcode" : {
+                          "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address/0/postalcode",
+                          "type" : "number"
+                        }
+                      }
+                    },
+                    "sn:road" : {
+                      "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address/0/sn:road",
+                      "type" : "string"
+                    }
+                  },
+                  "attributes" : {
+                    "location" : {
+                      "id" : "http://wso2jsonschema.org/ns:employee/0/sn:addresses/sn:address/0/location",
+                      "type" : "string"
+                    }
+                  }
+                } ]
+              }
+            }
+          }
+        }
+      } ]
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "ns",
+    "url" : "http://wso2.employee.info"
+  }, {
+    "prefix" : "sn",
+    "url" : "http://wso2.employee.address"
+  } ]
+}
